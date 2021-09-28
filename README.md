@@ -1,3 +1,22 @@
+## User Management Application
+
+## Features
+
+## Get Data of all Users from localStorage
+## Add Data to localStorage of a user
+## Auto generated id
+## Pagination on users data
+## Preloading while editing users data in form
+## Used reactive form
+## Edit users data
+## Delete users data
+
+
+
+
+
+
+
 # AngularFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
@@ -28,13 +47,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-#Features
-
-=>Get Data of all Users from localStorage
-=>Add Data to localStorage of a user
-=>Auto generated id
-=>Pagination on users data
-=>Preloading while editing users data in form
-=>Used reactive form
-=>Edit users data
-=>Delete users data
