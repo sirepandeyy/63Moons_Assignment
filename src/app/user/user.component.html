@@ -1,0 +1,43 @@
+<h1 style="text-align: center; margin-top: 10px;">Users</h1>
+
+<a [routerLink]="['/userAddEdit']"  class="btn  btn-sm btn-outline-secondary"><button  mat-raised-button style="margin-bottom:16px"  color="secondary">Add User</button></a> 
+
+<div *ngIf="dataSource">
+
+    <mat-table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header >Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell  *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <a [routerLink]="['/userAddEdit',element]" class="btn btn-sm btn-outline-secondary"><button  mat-raised-button  color="secondary">Edit</button></a> 
+          <button mat-raised-button (click)="deleteUser(element.id)" color="secondary">Delete</button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    </mat-table>
+    
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"  showFirstLastButtons></mat-paginator>
+
+  </div>
+
+
+

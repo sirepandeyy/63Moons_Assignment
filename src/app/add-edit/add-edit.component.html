@@ -1,0 +1,39 @@
+
+  <h1 style="text-align: center; margin-top: 10px;">Add User</h1>
+
+  <div>
+  
+    <mat-card-content>
+      <form #f="ngForm" [formGroup]="form" class="mat-elevation-z8" style="width: 100%; padding: 5px; text-align: center;">
+  
+        <mat-form-field>
+          <input matInput placeholder="Name" name="name" [(ngModel)]="user.name" class="form-control"
+          formControlName="name" required>
+          <span class="text-danger"
+          *ngIf="(formControl.name.touched || submitted) && formControl.name.errors?.required">
+          Name is required
+      </span>
+  
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Email" name="email" [(ngModel)]="user.email" class="form-control"
+          formControlName="email" required>
+          <span class="text-danger"
+          *ngIf="(formControl.email.touched || submitted) && formControl.email.errors?.required">
+          Email is required
+      </span>
+        </mat-form-field>
+  
+  
+      </form>
+  
+    </mat-card-content>
+    <div style="text-align: center; margin-top: 10px;">
+      <button mat-raised-button *ngIf="!user.id" (click)="createUser()" color="primary">Add User</button>
+      <button mat-raised-button *ngIf="user.id" (click)="updateUser(f)" color="primary">Update User</button>
+      <button mat-raised-button (click)="newUser()" color="primary">New..</button>
+  
+    </div>
+
+  </div>
+  
