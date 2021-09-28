@@ -1,15 +1,15 @@
 ## User Management Application
 
-## Features
+## Features :-
 
-## Get Data of all Users from localStorage
-## Add Data to localStorage of a user
-## Auto generated id
-## Pagination on users data
-## Preloading while editing users data in form
-## Used reactive form
-## Edit users data
-## Delete users data
+=> Get Data of all Users from localStorage
+=> Add Data to localStorage of a user
+=> Auto generated id
+=> Pagination on users data
+=> Preloading while editing users data in form
+=> Used reactive form
+=> Edit users data
+=> Delete users data
 
 
 
